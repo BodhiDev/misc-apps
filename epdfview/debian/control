@@ -1,0 +1,17 @@
+Source: epdfview
+Section: x11
+Priority: optional
+Maintainer: Yves-Alexis Perez <corsac@debian.org>
+Build-Depends: debhelper (>= 7.0.0), libgtk2.0-dev, 
+ libpoppler-glib-dev (>= 0.5), libcups2-dev, devscripts
+Standards-Version: 3.9.2
+Homepage: http://trac.emma-soft.com/epdfview/
+
+Package: epdfview
+Architecture: any
+Provides: pdf-viewer
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: poppler-data
+Description: Lightweight pdf viewer based on poppler libs
+ The aim of ePDFView is to make a simple PDF document viewer, in the lines of 
+ Evince but without using the GNOME libraries.

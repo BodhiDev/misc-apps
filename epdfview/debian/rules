@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+
+
+LDFLAGS=$(shell dpkg-buildflags --get LDFLAGS)
+CXXFLAGS=$(shell dpkg-buildflags --get CXXFLAGS)
+CXXFLAGS+=$(HARDENING_CFLAGS)
+LDFLAGS+=$(HARDENING_LDFLAGS)
+LDFLAGS+=-Wl,-z,defs -Wl,--as-needed -Wl,-O1
+
+export CXXFLAGS LDFLAGS
+
+%:
+	dh $@
