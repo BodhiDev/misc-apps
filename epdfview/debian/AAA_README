@@ -1,12 +1,5 @@
-# epdfview
-
-The URL in the old package points to http://trac.emma-soft.com/epdfview, the link is dead.
-
-The website of the (former?) developer, Emma-Soft doesn't mention ePDFview anywhere. I have difficulty finding information about it.
-
-http://web.archive.org/web/20120218224510/http://trac.emma-soft.com/epdfview/
-
-Therefore we are using a fork: https://github.com/jristz/epdfview
+I patch this so it doesn't have a broken link in help screen. 
+Should be a debian/patch
 
 --- a/src/gtk/MainView.cxx
 +++ b/src/gtk/MainView.cxx
@@ -19,4 +12,3 @@ Therefore we are using a fork: https://github.com/jristz/epdfview
              "authors", authors,
              "comments", comments,
              "translator-credits", _("translator-credits"),
-
